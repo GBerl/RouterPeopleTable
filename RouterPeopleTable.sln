@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouterPeopleTable.web", "RouterPeopleTable.web\RouterPeopleTable.web.csproj", "{0CBB3155-2BCB-43F6-9978-C40D811393E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouterPeopleTable.data", "RouterPeopleTable.data\RouterPeopleTable.data.csproj", "{DF4BA823-9041-4BFE-AFE9-6F43A2F38010}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CBB3155-2BCB-43F6-9978-C40D811393E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CBB3155-2BCB-43F6-9978-C40D811393E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CBB3155-2BCB-43F6-9978-C40D811393E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CBB3155-2BCB-43F6-9978-C40D811393E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF4BA823-9041-4BFE-AFE9-6F43A2F38010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF4BA823-9041-4BFE-AFE9-6F43A2F38010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF4BA823-9041-4BFE-AFE9-6F43A2F38010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF4BA823-9041-4BFE-AFE9-6F43A2F38010}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF3C7282-3D1D-45EE-BF0B-959B2F67D13A}
+	EndGlobalSection
+EndGlobal
