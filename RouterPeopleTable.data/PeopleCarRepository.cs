@@ -44,6 +44,21 @@ namespace RouterPeopleTable.data
                 context.SaveChanges();
             }
         }
+        public List<Car> GetCarsById(int id)
+        {
+            using (var context = new PeopleCarContext(_connection))
+            {
+                return context.Cars.Where(c =>c.PersonId == id).ToList();
+            }
+        }
+        public void DeleteCars(int id)
+        {
+            using (var context = new PeopleCarContext(_connection))
+            {
+                context.RemoveRange(context.Cars.Where(c => c.PersonId == id));
+                context.SaveChanges();
+            }
+        }
     }
 
 

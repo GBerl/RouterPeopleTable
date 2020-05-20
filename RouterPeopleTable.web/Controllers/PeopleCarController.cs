@@ -50,5 +50,20 @@ namespace RouterPeopleTable.web.Controllers
             var repo = new PeopleCarRepository(_connection);
             repo.AddCar(c);
         }
+        [HttpGet]
+        [Route("getcarsbyid")]
+        public List<Car> GetCarsById(int id)
+        {
+            var repo = new PeopleCarRepository(_connection);
+            return repo.GetCarsById(id);
+        }
+        [HttpPost]
+        [Route("deletecarsforid")]
+        public void DeleteCarsForId(int id)
+        {
+            var repo = new PeopleCarRepository(_connection);
+            repo.DeleteCars(id);
+        }
     }
+
 }

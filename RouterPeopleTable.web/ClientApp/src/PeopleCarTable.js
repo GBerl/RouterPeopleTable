@@ -2,11 +2,13 @@
 import axios from 'axios'
 import PersonCarRow from './PersonCarRow'
 import { Link } from 'react-router-dom'
+import SearchBox from './SearchBox'
 
 class PeopleCarTable extends React.Component {
 
     state = {
-        people:[]
+        people: [],
+        searchText: ''
     }
 
     componentDidMount = () => {
@@ -18,12 +20,22 @@ class PeopleCarTable extends React.Component {
         this.setState({ people: data })
     }
 
+    onSearchTextChange = e => {
+        this.setState({ searchText: e.target.value.toLowerCase()})
+    }
+
+    clearSearchClick = () => {
+        this.setState({ searchText: '' })
+    }
     render() {
         return (
             <div>
-                <div className='container col-md-8 col-md-offset-2'style={{ marginTop: 45 }}>
+                <SearchBox searchText={this.state.searchText}
+                    onSearchTextChange={this.onSearchTextChange}
+                    clearSearchClick={this.clearSearchClick}/>
+                <div className='container col-md-8 col-md-offset-2'>
                     <Link to={`/addperson`}><button className="btn btn-primary btn-block">Add Person</button></Link>
-                    <table className="table table-bordered table-striped table-hover">
+                    <table className="table table-bordered table-striped table-hover" style={{ marginTop: 45 }}>
                         <thead>
                             <tr>
                                 <th>First Name</th>
@@ -35,7 +47,7 @@ class PeopleCarTable extends React.Component {
                             </tr>
                         </thead>
                         <tbody>
-                            {this.state.people.map((person) => <PersonCarRow key={person.id} person={person} />)}  
+                            {this.state.people.filter(p => (p.firstName.concat(p.lastName).toLowerCase()).includes(this.state.searchText)).map((person) => <PersonCarRow key={person.id} person={person} />)}  
                         </tbody>
                     </table>
                 </div>

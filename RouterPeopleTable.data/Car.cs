@@ -11,6 +11,5 @@ namespace RouterPeopleTable.data
         public string Model { get; set; }
         public int Year { get; set; }
         public int PersonId { get; set; }
-        public Person Person { get; set; }
     }
 }
